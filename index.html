@@ -1,50 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Task Manager</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <main class="container">
-
-        <header>
-            <h1>My Task Manager</h1>
-            <p>Manage your daily tasks</p>
-        </header>
-
-        <section class="task-section">
-
-            <form>
-                <label for="task">Enter your task:</label>
-
-                <div class="task-input">
-                    <input 
-                        type="text" 
-                        id="task" 
-                        name="task"
-                        placeholder="Enter a task"
-                    >
-
-                    <button type="submit">Add</button>
-                </div>
-            </form>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <h1 class="brand">My Task Manager</h1>
+        <p class="brand-subtitle">Day 1 — Static Page: Task Manager Shell</p>
+      </header>
+      <main class="app">
+        <section aria-label="Add new task">
+          <form class="task-form">
+            <label class="sr-only" for="task-input">Task</label>
+            <input
+              id="task-input"
+              class="task-input"
+              type="text"
+              name="task"
+              placeholder="What would you like to do?"
+            />
+            <button class="add-button" type="submit">Add</button>
+          </form>
         </section>
-
-        <section class="task-list-section">
-            <h2>My Tasks</h2>
-
-            <ul class="task-list">
-                <!-- Tasks will appear here later -->
-            </ul>
+        <section class="task-list-panel" aria-label="Your task list">
+          <h2>My Tasks</h2>
+          <ul class="task-list" aria-live="polite">
+          </ul>
         </section>
-
-    </main>
-
-</body>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
